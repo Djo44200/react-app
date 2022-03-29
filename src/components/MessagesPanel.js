@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 export class MessagesPanel extends React.Component {
     constructor(props) {
@@ -6,7 +7,8 @@ export class MessagesPanel extends React.Component {
       }
     render() {
       return <div className='messages-panel' >
-          MessagesPanel
+          <textarea className='messages-panel-input' id="story" name="story"/
+          ><Button  className='messages-panel-btn' variant="primary">Valider</Button>
       </div>;
     }
   }

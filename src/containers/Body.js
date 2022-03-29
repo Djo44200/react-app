@@ -1,5 +1,6 @@
 import React from 'react';
 import {Chat} from '../components/Chat.js'
+import {Navigator} from '../components/Navigator.js'
 
 
 export class Body extends React.Component {
@@ -7,6 +8,6 @@ export class Body extends React.Component {
         super(props);
       }
     render() {
-      return <div className='body-ctn'> <Chat /></div>;
+      return <div className='body-ctn'> <Navigator /> <Chat /></div>;
     }
   }

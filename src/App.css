@@ -18,10 +18,17 @@
 .body-ctn{
   display:flex;
   align-items:center;
-  justify-content:center;
   height: 100%; 
   background-color: rgb(44, 47, 74);
   color: white ;
+  padding-left:1rem;
+  padding-right:1rem;
+}
+.navigator-ctn{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  width: 10%;
 }
 
 .chat-ctn{
@@ -29,12 +36,38 @@
   align-items:center;
   justify-content:center;
   flex-direction:column;
+  width: 90%;
   height: 100%;
-  padding:1rem 0rem 1rem 0rem;
+  border: 1px solid white;
+  
 }
 
 .channel-list, .messages-panel{
   display: flex;
   padding-top:0.5rem;
   padding-bottom:0.5rem;
+  width: 100%;
 }
+.channel-list{
+  display: flex;
+  height: 100px;
+  align-items:center;
+  justify-content:flex-start;
+  padding-left: 1rem;
+}
+.messages-panel{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items:center;
+  justify-content:center;
+  
+}
+.messages-panel-input{
+ border: 1px solid gray;
+ border-radius: 10px;
+ width: 90%;
+}
+.messages-panel-btn{
+  margin-left: 1rem;
+ }

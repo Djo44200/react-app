@@ -8,15 +8,7 @@ export class Chat extends React.Component {
         super(props);
       }
     render() {
-      const chatStyle = {
-        display:'flex',
-        alignItem:'center',
-        justifyContent:'center',
-        flexDirection:'column',
-        height: '100%',
-        padding:'1rem 0rem 1rem 0rem'
-      }
-      return <div className='chat' style={chatStyle}>
+      return <div className='chat-ctn'>
         <ChannelList/>
         <MessagesPanel/>
       </div>;

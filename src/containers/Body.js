@@ -7,13 +7,6 @@ export class Body extends React.Component {
         super(props);
       }
     render() {
-        const bodyStyle = {
-            height: '100%', 
-            backgroundColor: 'rgb(44, 47, 74)',
-            display:'flex',
-            alignItem:'center',
-            justifyContent:'center',
-          }
-      return <div className='body-ctn' style={bodyStyle}> <Chat /></div>;
+      return <div className='body-ctn'> <Chat /></div>;
     }
   }

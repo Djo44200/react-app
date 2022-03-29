@@ -5,10 +5,7 @@ export class MessagesPanel extends React.Component {
         super(props);
       }
     render() {
-      const panelStyle = {
-        height: '100%',
-      }
-      return <div className='messages-panel' style={panelStyle} >
+      return <div className='messages-panel' >
           MessagesPanel
       </div>;
     }

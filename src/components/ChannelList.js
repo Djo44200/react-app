@@ -6,10 +6,7 @@ export class ChannelList extends React.Component {
         super(props);
       }
     render() {
-      const channelStyle = {
-        height: '100%',
-      }
-      return <div className='channel-list' style={channelStyle}>
+      return <div className='channel-list'>
           Channel
       </div>;
     }

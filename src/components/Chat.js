@@ -18,8 +18,8 @@ export class Chat extends React.Component {
       }
     render() {
       return <div className='chat-ctn'>
-        <ChannelList/>
-        <MessagesPanel handler = {this.handler}/>
+        <ChannelList onSelectChannel={''} channels={''} />
+        <MessagesPanel onSendMessage={''} channel={''} />
       </div>;
     }
   }

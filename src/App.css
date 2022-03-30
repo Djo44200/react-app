@@ -44,7 +44,6 @@
 
 .channel-list, .messages-panel{
   display: flex;
-  padding-top:0.5rem;
   padding-bottom:0.5rem;
   width: 100%;
 }
@@ -59,8 +58,6 @@
   display: flex;
   flex-direction: column;
   align-items:center;
-  justify-content:center;
- 
   width: 10%;
   height: 100%;
   border-right: 1px solid white;
@@ -72,6 +69,8 @@
   justify-content:center;
   width: 100%;
   padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
 }
 .channel-item:hover{
   background-color: #6f1abd;

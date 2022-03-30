@@ -3,8 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Header } from './components/Header.js';
 import { Body } from './containers/Body.js';
 import { StartModal } from './components/StartModal.js';
+import {connect} from 'react-redux';
+import {mapDispatchToProps,mapStateToPros} from './store/User'
 import React from 'react';
-export class App extends React.Component {
+
+
+class App extends React.Component {
 
   constructor(props) {
     super(props);
@@ -14,20 +18,18 @@ export class App extends React.Component {
     username :'',
   }
   handler(username) {
-    this.setState({
-      username: username,
-    })
+    this.props.addUser(username);
   }
   render() {
     return (
       <div className="App">
           <StartModal username={this.handler}/>
-          <Header name={this.state.username} />
+          <Header name={this.props.getUser()} />
           <Body />
       </div>
     );;
   }
  
 }
-
-export default App;
+const connectChat = connect(mapStateToPros,mapDispatchToProps);
+export default connectChat(App);

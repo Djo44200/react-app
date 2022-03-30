@@ -2,7 +2,8 @@ import React from 'react'
 import {ChannelList} from './ChannelList';
 import {MessagesPanel} from './MessagesPanel'
 import {connect} from 'react-redux';
-import {mapDispatchToProps,mapStateToProps} from '../store/ChannelStore'
+import {mapDispatchToProps,mapStateToProps} from '../store/ChannelStore';
+import {API_ALL_CHANNELS} from '../api/api.js';
 
 class Chat extends React.Component {
     constructor(props) {
@@ -23,11 +24,8 @@ class Chat extends React.Component {
         })
       }
       async apiSocket(){
-        await fetch(`https://pacific-sierra-45747.herokuapp.com/getChannels`)
-        .then(response => response.json())
-        .then( async (responseJson) => {
-          this.props.addChannels(responseJson.channels);
-        })
+        const result = await API_ALL_CHANNELS;
+        this.props.addChannels(result);
 
       }
       selectChannel(id){

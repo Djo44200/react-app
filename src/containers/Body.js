@@ -9,6 +9,6 @@ export class Body extends React.Component {
         
       }
     render() {
-      return <div className='body-ctn'> <Navigator /> <Chat /></div>;
+      return <div className='body-ctn'> <Chat /></div>;
     }
   }

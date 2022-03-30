@@ -39,7 +39,7 @@ class Chat extends React.Component {
     render() {
       return <div className='chat-ctn'>
         <ChannelList onSelectChannel={(id)=>this.selectChannel(id)} channels={this.props.getChannels()} />
-        <MessagesPanel onSendMessage={(id,text)=>this.sendMessage(id,text)} channel={this.state.channel} />
+        <MessagesPanel onSendMessage={(id,text)=>this.sendMessage(id,text)} channel={this.props.getChannel()} />
       </div>;
     }
   }

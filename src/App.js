@@ -14,18 +14,18 @@ class App extends React.Component {
     super(props);
     this.handler = this.handler.bind(this)
   }
-  state = {
-    username :'',
-  }
+
   handler(username) {
     this.props.addUser(username);
   }
   render() {
     return (
       <div className="App">
+        <React.StrictMode>
           <StartModal username={this.handler}/>
           <Header name={this.props.getUser()} />
           <Body />
+        </React.StrictMode>
       </div>
     );;
   }

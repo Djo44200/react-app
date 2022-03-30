@@ -10,5 +10,6 @@ export const mapDispatchToProps = (dispatch) => {
  export  const mapStateToPros = (store) => {
     return {
       getChannels: () => store.channels,
+      getChannel: () => store.channel,
     }
   }

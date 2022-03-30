@@ -1,5 +1,5 @@
 export const initialState = { 
     channels: [{}],
-    channel:0,
+    channel:undefined,
     user:'',
   };

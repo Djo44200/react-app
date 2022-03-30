@@ -2,7 +2,7 @@ import React from 'react'
 import {ChannelList} from './ChannelList';
 import {MessagesPanel} from './MessagesPanel'
 import {connect} from 'react-redux';
-import {mapDispatchToProps,mapStateToPros} from '../store/ChannelStore'
+import {mapDispatchToProps,mapStateToProps} from '../store/ChannelStore'
 
 class Chat extends React.Component {
     constructor(props) {
@@ -44,6 +44,6 @@ class Chat extends React.Component {
     }
   }
 
-  const connectChat = connect(mapStateToPros,mapDispatchToProps);
+  const connectChat = connect(mapStateToProps,mapDispatchToProps);
 
   export default connectChat(Chat);

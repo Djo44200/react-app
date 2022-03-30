@@ -7,7 +7,7 @@ export const mapDispatchToProps = (dispatch) => {
       selectChannel: (payload) => dispatch({ type: SELECT_CHANNEL, payload: payload}),
     }
   }
- export  const mapStateToPros = (store) => {
+ export  const mapStateToProps = (store) => {
     return {
       getChannels: () => store.channels,
       getChannel: () => store.channel,

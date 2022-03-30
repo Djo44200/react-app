@@ -1,6 +1,5 @@
 import React from 'react';
-import {Chat} from '../components/Chat.js'
-import {Navigator} from '../components/Navigator.js'
+import Chat from '../components/Chat.js'
 
 
 export class Body extends React.Component {

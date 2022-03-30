@@ -91,7 +91,16 @@
 .messages-input{
   display: flex;
   align-items:center;
+  justify-content: center;
+  width: 100%;
 }
 .messages-panel-btn{
   margin-left: 1rem;
+ }
+
+ .messages-input .btn{
+   margin-left: 1rem;
+ }
+ .messages-input input{
+   height: 35px;
  }

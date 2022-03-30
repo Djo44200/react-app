@@ -1,8 +1,10 @@
 import React from 'react'
 import {ChannelList} from './ChannelList';
 import {MessagesPanel} from './MessagesPanel'
+import {connect} from 'react-redux';
+import {ADD_CHANNELS} from '../reducers'
 
-export class Chat extends React.Component {
+class Chat extends React.Component {
     constructor(props) {
         super(props);
         this.handler = this.handler.bind(this);
@@ -13,7 +15,6 @@ export class Chat extends React.Component {
 
       state = {
         arrayMessages :[],
-        channels:[],
         channel:{}
 
       }
@@ -26,9 +27,7 @@ export class Chat extends React.Component {
         await fetch(`https://pacific-sierra-45747.herokuapp.com/getChannels`)
         .then(response => response.json())
         .then( async (responseJson) => {
-          this.setState({
-            channels: responseJson.channels
-          })
+          this.props.addChannels(responseJson.channels);
         })
 
       }
@@ -42,8 +41,25 @@ export class Chat extends React.Component {
       }
     render() {
       return <div className='chat-ctn'>
-        <ChannelList onSelectChannel={(id)=>this.selectChannel(id)} channels={this.state.channels} />
+        <ChannelList onSelectChannel={(id)=>this.selectChannel(id)} channels={this.props.getChannels()} />
         <MessagesPanel onSendMessage={(id,text)=>this.sendMessage(id,text)} channel={this.state.channel} />
       </div>;
     }
   }
+  
+
+  const mapDispatchToProps = (dispatch) => {
+    return {
+      // dispatching plain actions
+      addChannels: (payload) => dispatch({ type: ADD_CHANNELS, payload: payload}),
+    }
+  }
+  const mapStateToPros = (store) => {
+    return {
+      getChannels: () => store.channels,
+    }
+  }
+
+  const connectChat = connect(mapStateToPros,mapDispatchToProps);
+
+  export default connectChat(Chat);

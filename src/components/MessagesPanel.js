@@ -34,7 +34,7 @@ export const MessagesPanel = ({onSendMessage, channel}) => {
             {channel &&
                 <div className="messages-input">
                     <input type="text" onChange={handleInput} onKeyPress={handleKey} value={inputValue} />
-                    <button onClick={send}>Send</button>
+                    <button className='btn btn-primary' onClick={send}>Send</button>
                 </div>
             }
         </div>);
